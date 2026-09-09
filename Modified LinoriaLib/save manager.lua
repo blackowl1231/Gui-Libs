@@ -3,9 +3,8 @@ local SaveManager = {};
 do
 	SaveManager.Ignore = {};
 	SaveManager.Library = EZ;
-	SaveManager.Folder = EZ.BaseFolder; -- default to global base
+	SaveManager.Folder = EZ.BaseFolder;
 
-	-- SetFolder method
 	function SaveManager:SetFolder(Folder)
 		self.Folder = Folder;
 	end;
