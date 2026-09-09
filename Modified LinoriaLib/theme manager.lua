@@ -3,7 +3,7 @@ local ThemeManager = {};
 do
 	ThemeManager.Library = EZ;
 	ThemeManager.DefaultTheme = 'Default';
-	ThemeManager.Folder = EZ.BaseFolder;
+	ThemeManager.Folder = "Elite Zone";
 
 	function ThemeManager:SetFolder(Folder)
 		self.Folder = Folder;
