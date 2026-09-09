@@ -5,6 +5,10 @@ do
 	ThemeManager.DefaultTheme = 'Default';
 	ThemeManager.Folder = "Elite Zone";
 
+	function ThemeManager:SetLibrary(Lib)
+		self.Library = Lib;
+	end;
+
 	function ThemeManager:SetFolder(Folder)
 		self.Folder = Folder;
 	end;
@@ -630,4 +634,8 @@ do
 	end;
 end;
 
-EZ.ThemeManager = ThemeManager;
+if EZ then
+	EZ.ThemeManager = ThemeManager;
+else
+	error("EZ library not loaded before ThemeManager", 2);
+end

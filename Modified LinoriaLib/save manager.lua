@@ -5,6 +5,10 @@ do
 	SaveManager.Library = EZ;
 	SaveManager.Folder = "Elite Zone";
 
+	function SaveManager:SetLibrary(Lib)
+		self.Library = Lib;
+	end;
+
 	function SaveManager:SetFolder(Folder)
 		self.Folder = Folder;
 	end;
@@ -448,4 +452,8 @@ do
 	end;
 end;
 
-EZ.SaveManager = SaveManager;
+if EZ then
+	EZ.SaveManager = SaveManager;
+else
+	error("EZ library not loaded before SaveManager", 2);
+end

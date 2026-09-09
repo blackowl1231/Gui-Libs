@@ -180,6 +180,7 @@ local EZ = {
 	ToggleKeybind = nil;
 
 	ShowCustomCursor = true;
+
 	BaseFolder = "Elite Zone";
 };
 
@@ -5577,3 +5578,6 @@ function EZ:CreateWindow(...)
 
 	return Window;
 end;
+
+_G.EZ = EZ;
+return EZ;
