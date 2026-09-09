@@ -3,7 +3,7 @@ local SaveManager = {};
 do
 	SaveManager.Ignore = {};
 	SaveManager.Library = EZ;
-	SaveManager.Folder = EZ.BaseFolder;
+	SaveManager.Folder = "Elite Zone";
 
 	function SaveManager:SetFolder(Folder)
 		self.Folder = Folder;
