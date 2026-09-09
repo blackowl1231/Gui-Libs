@@ -4756,7 +4756,7 @@ do
     end
 
     ThemeManager.BuiltInThemes = {
-        ['Default']      = MakeTheme('ffffff', '181818', '4777b6', '141414', '1f1f1f', 'e50000'),
+        ['Default']      = MakeTheme('ffffff', '0a0a0a', '1300ff', '0a0a0a', '171717', 'e50000'),
         ['Tokyo Night']  = MakeTheme('ffffff', '191925', '6956cb', '15151e', '272727', 'fb5f5f'),
         ['Nord']         = MakeTheme('ffffff', '1c1e20', '9effc8', '1c1e20', '24282d', 'ff7a00'),
         ['Skeet']        = MakeTheme('ffffff', '131313', '81ff54', '151515', '2a2a2a', 'e50000'),
@@ -4767,7 +4767,6 @@ do
         ['Primordial']   = MakeTheme('ffffff', '181818', 'd7a6b0', '1f1f1f', '2a2a2a', 'e50000'),
         ['Monolith']     = MakeTheme('ffffff', '141115', 'c707bd', '171417', '272427', 'e50000'),
         ['V3rmillion']   = MakeTheme('ffffff', '202020', 'cd1818', '202020', '2a2a2a', 'e50000'),
-        ['Dark']         = MakeTheme('ffffff', '0a0a0a', '5945ff', '0a0a0a', '171717', 'e50000'),
 
         ['Sage']         = MakeTheme('ffffff', '171917', '8ba888', '141613', '262a25', 'e50000'),
         ['Dusk']         = MakeTheme('ffffff', '17171c', '8a90b8', '141419', '26262e', 'e50000'),
