@@ -1838,7 +1838,7 @@ do
                         Key = 'MB1'
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
                         Key = 'MB2'
-                    elseif Input.UserInputType == Enum.UserInputState.MouseButton3 then
+                    elseif Input.UserInputType == Enum.UserInputType.MouseButton3 then
                         Key = 'MB3'
                     end
                     Break = true
