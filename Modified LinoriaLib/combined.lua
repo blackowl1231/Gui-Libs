@@ -544,7 +544,7 @@ function EZ:UpdateBackground(Mode)
         end)
         EZ.MenuDim.Visible = true
     end
-    
+
     if Mode == 'finalize' then
         if not WantColor then
             EZ.MenuColor.Enabled = false
@@ -1739,9 +1739,10 @@ do
             local State
             if KeyPicker.Mode == 'Hold' then
                 if Key == 'None' or Key == '...' then return false end
-                if Key == 'MB1' or Key == 'MB2' then
+                if Key == 'MB1' or Key == 'MB2' or Key == 'MB3' then
                     State = Key == 'MB1' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1)
                         or Key == 'MB2' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2)
+                        or Key == 'MB3' and InputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton3)
                 else
                     State = InputService:IsKeyDown(Enum.KeyCode[Key])
                 end
@@ -1837,6 +1838,8 @@ do
                         Key = 'MB1'
                     elseif Input.UserInputType == Enum.UserInputType.MouseButton2 then
                         Key = 'MB2'
+                    elseif Input.UserInputType == Enum.UserInputState.MouseButton3 then
+                        Key = 'MB3'
                     end
                     Break = true
                     Picking = false
@@ -1857,9 +1860,10 @@ do
                 local ParentOff = KeyPicker.Parent and KeyPicker.Parent.Type == 'Toggle' and not KeyPicker.Parent.Value
                 if KeyPicker.Mode == 'Toggle' and not ParentOff then
                     local Key = KeyPicker.Value
-                    if Key == 'MB1' or Key == 'MB2' then
+                    if Key == 'MB1' or Key == 'MB2' or Key == 'MB3' then
                         if Key == 'MB1' and Input.UserInputType == Enum.UserInputType.MouseButton1
-                            or Key == 'MB2' and Input.UserInputType == Enum.UserInputType.MouseButton2 then
+                            or Key == 'MB2' and Input.UserInputType == Enum.UserInputType.MouseButton2 
+                            or Key == 'MB3' and Input.UserInputType == Enum.UserInputType.MouseButton3 then
                             KeyPicker.Toggled = not KeyPicker.Toggled
                             KeyPicker:DoClick()
                         end
