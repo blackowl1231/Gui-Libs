@@ -4756,7 +4756,7 @@ do
     end
 
     ThemeManager.BuiltInThemes = {
-        ['Default']      = MakeTheme('ffffff', '0a0a0a', '1300ff', '0a0a0a', '171717', 'e50000'),
+        ['Default']      = MakeTheme('ffffff', '0c1014', '1300ff', '0c0f14', '191919', 'e50000'),
         ['Tokyo Night']  = MakeTheme('ffffff', '191925', '6956cb', '15151e', '272727', 'fb5f5f'),
         ['Nord']         = MakeTheme('ffffff', '1c1e20', '9effc8', '1c1e20', '24282d', 'ff7a00'),
         ['Skeet']        = MakeTheme('ffffff', '131313', '81ff54', '151515', '2a2a2a', 'e50000'),
