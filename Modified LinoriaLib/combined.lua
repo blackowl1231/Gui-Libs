@@ -535,16 +535,26 @@ function EZ:UpdateBackground(Mode)
 
     if Open then
         EZ.MenuColor.Enabled = WantColor
-        EZ.MenuColor.Parent  = WantColor and Lighting or nil
-        EZ.MenuBlur.Enabled  = WantBlur
-        EZ.MenuBlur.Parent   = WantBlur and Lighting or nil
-        EZ.MenuDim.Visible   = true
+        pcall(function()
+            EZ.MenuColor.Parent = WantColor and Lighting or nil
+        end)
+        EZ.MenuBlur.Enabled = WantBlur
+        pcall(function()
+            EZ.MenuBlur.Parent = WantBlur and Lighting or nil
+        end)
+        EZ.MenuDim.Visible = true
     end
-
+    
     if Mode == 'finalize' then
-        if not WantColor then EZ.MenuColor.Enabled = false; EZ.MenuColor.Parent = nil end
-        if not WantBlur  then EZ.MenuBlur.Enabled  = false; EZ.MenuBlur.Parent  = nil end
-        if not Open      then EZ.MenuDim.Visible   = false end
+        if not WantColor then
+            EZ.MenuColor.Enabled = false
+            pcall(function() EZ.MenuColor.Parent = nil end)
+        end
+        if not WantBlur then
+            EZ.MenuBlur.Enabled = false
+            pcall(function() EZ.MenuBlur.Parent = nil end)
+        end
+        if not Open then EZ.MenuDim.Visible = false end
         return
     end
 
